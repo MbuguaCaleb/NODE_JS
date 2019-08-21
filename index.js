@@ -1,41 +1,43 @@
-const Logger = require("./logger");
+const http = require("http");
+const path = require("path");
+const fs = require("fs");
 
-const logger = new Logger();
+const server = http.createServer((req, res) => {
+  /*
+  if (req.url === "/") {
+    fs.readFile(
+      path.join(__dirname, "public", "index.html"),
+      (err, content) => {
+        if (err) throw err;
+        res.writeHead(200, { "Content-type": "text/html" });
+        res.end(content);
+      }
+    );
+  }
+  if (req.url === "/api/users") {
+    const users = [
+      { name: "Bob Smith", age: 40 },
+      { name: "Mercy Wanjiru", age: 39 }
+    ];
+    res.writeHead(200, { "Content-type": "application/json" });
+    //turning the array from the database into JSON
+    res.end(JSON.stringify(users));
+  }
+  */
 
-logger.on("message", data => console.log("Called  Listener", data));
+  //Build file path
 
-logger.log("Hello World!");
+  let filePath = path.join(
+    __dirname,
+    "public",
+    req.url === "/" ? "index.html" : req.url
+  );
 
-//My Example-MbuguaCaleb
-
-const LoggerTwo = require("./logger");
-
-const loggerTwo = new LoggerTwo();
-
-loggerTwo.on("message", data => console.log("Called  Listener", data));
-
-loggerTwo.log("Hello World!");
-
-//importing a class
-/*
-Not Yet Implemetned
-
-
-import Person from "./person";
-
-//console.log(__filename, __dirname);
-//Module Wrappernode function
-/*
-(function(exports, require, module, __filename, __dirname) {
+  console.log(filePath);
+  res.end();
 });
-*/
 
-//importing the person class from the file path
-//instanciatig the class
-/*
-const Person = require("./person");
+const PORT = process.env.PORT || 5000;
 
-const person1 = new Person("Mbugua Caleb", 30);
-
-person1.greeting();
-*/
+//takes a call back
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
