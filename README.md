@@ -46,4 +46,13 @@ Package_JSON in node is used in storing all your dependencies - created by npm i
 
 Npm install installs all your dependencies from another Machine.
 
+npm install -D nodemon
+
+
+npm lock Json is used to track all our dependencies
+
+```
+
+```
+Common JS Format for imports vs ES6
 ```

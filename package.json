@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/MbuguaCaleb/NODE_JS/issues"
   },
-  "homepage": "https://github.com/MbuguaCaleb/NODE_JS#readme"
+  "homepage": "https://github.com/MbuguaCaleb/NODE_JS#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
 }
