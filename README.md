@@ -56,3 +56,9 @@ npm lock Json is used to track all our dependencies
 ```
 Common JS Format for imports vs ES6
 ```
+
+```
+
+Synchronous-You wait until the whole process is complete before you move on
+
+```

@@ -12,6 +12,8 @@ import Person from "./person";
 });
 */
 
+//importing the person class from the file path
+//instanciatig the class
 
 const Person = require("./person");
 
