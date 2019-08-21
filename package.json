@@ -1,0 +1,19 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "Node Crash Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MbuguaCaleb/NODE_JS.git"
+  },
+  "author": "MbuguaCaleb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MbuguaCaleb/NODE_JS/issues"
+  },
+  "homepage": "https://github.com/MbuguaCaleb/NODE_JS#readme"
+}
